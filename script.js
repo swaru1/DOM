@@ -1,17 +1,14 @@
+var h1 = document.querySelector('h1')
+var h2 = document.querySelector('h2')
+var h3 = document.querySelector('h3')
 var btn1 = document.querySelector('#btn1')
-var btn2 = document.querySelector('#btn2')
-var sp = document.querySelector('h1 span')
 
 
-var a = 0;
+
 btn1.addEventListener('click' , function() {
-    a++;
-    console.log(a)
-    sp.innerHTML = a;
+    h1.textContent = 'alex'
+    h2.textContent = 18
+    h3.style.color = 'red'
+    h3.textContent = 'red'
 })
 
-btn2.addEventListener('click' , function() {
-    a--;
-    console.log(a)
-    sp.innerHTML = a;
-})
