@@ -10,14 +10,6 @@ body {
   width: 100%;
 }
 
-#task1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 30px;
-}
-
 .btn {
   font-size: 15px;
   text-transform: uppercase;
@@ -25,7 +17,6 @@ body {
   padding: 15px 25px;
   border-radius: 10px;
   border: none;
-  position: absolute;
   transition: all ease 0.2s;
   background-color: #dadada;
 }
@@ -43,17 +34,6 @@ body {
   gap: 30px;
 }
 
-#box {
-  height: 200px;
-  width: 200px;
-  border-radius: 10px;
-  background-color: #dadada;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-
-}
 
 #container {
   gap: 30px;
@@ -65,7 +45,20 @@ body {
   background-color: grey;
 }
 
-#box p {
+h1 {
   text-transform: uppercase;
+  font-weight: 600;
+}
+
+h2 {
+  padding: 80px;
+  background-color: #dadada;
+  border-radius: 15px;
+}
+
+p {
+  padding: 10px 30px;
+  background-color: #dadada;
+  font-size: 20px;
   font-weight: 600;
 }
