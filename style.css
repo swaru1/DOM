@@ -1,10 +1,75 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: gilroy;
-} html, body {
-    height: 100%;
-    width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
+#task1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#task1 h1 {
+  background-color: #dadada;
+  padding: 30px;
+  width: 100px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.btn {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 15px;
+  border: none;
+  transition: all ease 0.2s;
+}
+
+.btn:active {
+  background-color: lightgreen;
+  scale: 0.98;
+}
+
+#task2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#box {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: #dadada;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  gap: 30px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: grey;
+}
+
+#box p {
+  text-transform: uppercase;
+  font-weight: 600;
+}
