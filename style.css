@@ -51,9 +51,14 @@ h1 {
 }
 
 h2 {
+  text-align: center;
+  width: 400px;
   padding: 80px;
   background-color: #dadada;
   border-radius: 15px;
+  color: whitesmoke;
+  letter-spacing: 3px;
+  font-weight: 200;
 }
 
 p {
