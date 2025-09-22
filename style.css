@@ -19,6 +19,7 @@ body {
   border: none;
   transition: all ease 0.2s;
   background-color: #dadada;
+  z-index: 9;
 }
 
 .btn:active {
@@ -26,14 +27,21 @@ body {
   scale: 0.98;
 }
 
-#container {
+img{
+  position: absolute;
+  z-index: 5;
+}
+
+.container {
   height: 100%;
   width: 100%;
-
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  
-  background-color: rgb(43, 184, 215);
+  justify-content: center;
+  position: relative;
+  background-image: url(https://img.freepik.com/premium-photo/splash-frame-background-copy-space_1179130-399552.jpg?w=2000);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 8;
 }
 

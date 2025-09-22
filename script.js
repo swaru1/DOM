@@ -1,21 +1,21 @@
-var img1 = document.querySelector('#img1')
-var img2 = document.querySelector('#img2')
+var img = document.querySelector('img')
 var btn = document.querySelector('.btn')
+var cont = document.querySelector('.container')
 
-var src1 = img1.getAttribute('src')
-var src2 = img2.getAttribute('src')
 
-var flag = 0
 
 btn.addEventListener('click', function(){
-  console.log('button click')
-  if(flag == 0) {
-    img1.setAttribute('src', src2)
-    img2.setAttribute('src', src1)
-    flag = 1;
-  } else {
-    img1.setAttribute('src', src1)
-    img2.setAttribute( 'src', src2)
-    flag = 0;
-  }
+
+  var t = Math.random() * 100;
+  var l = Math.random() * 100;
+  var rot = Math.random() * 360;
+  var h = Math.random() * 300;
+
+  var img = document.createElement('img')
+  img.setAttribute('src', 'https://www.pinclipart.com/picdir/big/30-304178_mouse-free-png-transparent-image-cartoons-pinterest-clipart.png')
+  img.style.top = t+'%';
+  img.style.left = l+'%';
+  img.style.rotate = rot+'deg';
+  img.style.height = h+'px';
+  cont.appendChild(img)  
 })
