@@ -9,27 +9,28 @@ body {
   height: 100%;
   width: 100%;
   cursor: none;
+  background: black;
 }
 
 #cursor{
   height: 1em;
   width: 1em;
-  background-color: rgb(220, 20, 60);
+  background-color: white;
   position: absolute;
   border-radius: 50%;
   transform: translate(-50%, -50%);
+  transition: scale linear 0.3s;
 }
 
-.container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-image: url(https://img.freepik.com/premium-photo/splash-frame-background-copy-space_1179130-399552.jpg?w=2000);
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 8;
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  font-weight: 200;
+  z-index: 9;
+  color: white;
+  mix-blend-mode: difference;
 }
 
