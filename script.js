@@ -66,7 +66,7 @@ var card = document.querySelector(".card");
 
 card.style.display = "none";
 
-students.forEach(function (student, idx) {
+students.forEach(function (student) {
 
   var newCard = document.createElement("div");
   newCard.innerHTML = `<div class="image">
