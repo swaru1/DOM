@@ -8,7 +8,36 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background: rgb(211, 210, 210);
-  padding: 0 10px 10px 10px;
+}
+
+main{
+  background-color: rgb(225, 215, 109);
+  width: 100%;
+  padding: 20px;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.card {
+  padding: 20px;
+  height: 350px;
+  width: 250px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: center;
+  border-radius: 15px;
+  flex-grow: 1;
+}
+
+img{
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  object-position: center;
 }
 
