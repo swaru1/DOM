@@ -62,21 +62,12 @@ button {
   cursor: pointer;
 }
 
-.friend {
+.Friend {
   color: green;
 }
-.stranger {
+.Stranger {
   color: red;
 }
-button.friend {
-  background: green;
-  color: white;
-}
-button.stranger {
-  background: rgb(25, 112, 121);
-  color: white;
-}
-
 
 button:active {
   scale: 0.95;

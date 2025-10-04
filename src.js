@@ -1,89 +1,56 @@
-// const btn = document.querySelector("button");
-// const h3 = document.querySelector("h3");
-
 const users = [
   {
-    fullName: "Miss Leah Rohan",
-    email: "Kariane.Rolfson34@gmail.com",
-    mobile: "+17604708088",
-    city: "New Margarete",
+    profilePic: "https://randomuser.me/api/portraits/men/1.jpg",
+    name: "John Doe",
     status: "Stranger",
-    buttonText: "Add friend",
-    image:
-      "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/13.jpg",
+    buttonText: "Add Friend",
   },
   {
-    fullName: "Norman Rogahn",
-    email: "Erwin.Frami19@yahoo.com",
-    mobile: "+18297543929",
+    profilePic: "https://randomuser.me/api/portraits/women/2.jpg",
+    name: "Emma Watson",
     status: "Friend",
     buttonText: "Remove Friend",
-    city: "Fort Agustina",
-    image:
-      "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/44.jpg",
   },
   {
-    fullName: "Stuart Emmerich",
-    email: "Prudence87@yahoo.com",
-    mobile: "+12355219116",
+    profilePic: "https://randomuser.me/api/portraits/men/3.jpg",
+    name: "Michael Smith",
     status: "Stranger",
-    buttonText: "Add friend",
-    city: "Strongsville",
-    image:
-      "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/50.jpg",
-  },
-  {
-    fullName: "Tracy Lakin-Gottlieb II",
-    email: "Crystal_Carter75@hotmail.com",
-    mobile: "+15553260431",
-    status: "Friend",
-    buttonText: "Remove Friend",
-    city: "Rauworth",
-    image:
-      "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/98.jpg",
-  },
-  {
-    fullName: "Rachael Rath",
-    email: "Luella.Jast@gmail.com",
-    mobile: "+18564412906",
-    status: "Stranger",
-    buttonText: "Add friend",
-    city: "East Ceciliaburgh",
-    image:
-      "https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/95.jpg",
+    buttonText: "Add Friend",
   },
 ];
 
-let clutter = "";
-users.forEach((user, idx) => {
-  clutter += `<div class="card">
-        <img src=${user.image} />
-        <h1>${user.fullName}</h1>
-        <h3 class=${user.status}>${user.status}</h3>
-        <button id=${idx}>${user.buttonText}</button>
-    </div>`;
-});
+var main = document.querySelector("main");
+var card = document.querySelector(".card");
+var btn = document.querySelector("button");
 
-document.querySelector(".cards").innerHTML = clutter;
+function renderCards() {
+  let clutter = "";
 
-const addRemove = () => {
-  document.querySelector(".cards").addEventListener("click", (dets) => {
-    let temp = users[dets.target.id];
-    console.log(temp);
+  users.forEach(function (user, idx) {
+    clutter += `<div class="card" data-index = "${idx}">
+        <img src="${user.profilePic}" alt="">
+        <h1 > ${user.name}</h1>
+        <h3 class = "${user.status}"> ${user.status} </h3>
+        <button id="${idx}">${user.buttonText}</button>
+      </div>`;
   });
-};
-addRemove();
-let flag = 1;
-btn.addEventListener("click", () => {
-  if (flag === 0) {
-    h3.textContent = "Friends";
-    h3.style.color = "green";
-    btn.textContent = "Remove friend";
-    flag = 1;
+
+  main.innerHTML = clutter;
+}
+
+renderCards();
+
+main.addEventListener("click", function (dets) {
+  var selectedUser = users[dets.target.id];
+  console.log(selectedUser);
+
+  if ((selectedUser.status === "Stranger")) {
+    selectedUser.status = "Friend";
+    selectedUser.buttonText = "Remove Friend";
   } else {
-    h3.textContent = "Stranger";
-    h3.style.color = "red";
-    btn.textContent = "Add friend";
-    flag = 0;
+    selectedUser.status = "Stranger";
+    selectedUser.buttonText = "Add Friend";
   }
+
+  renderCards();
 });

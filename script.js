@@ -151,7 +151,7 @@ main.addEventListener("click", function (dets) {
       // Update DOM
       h3.textContent = "Friend";
       h3.className = "friend";
-      btn.textContent = "Remove Friend";
+      btn.textContent = "Remove Friend"; 
       btn.className = "friend";
     } else {
       users[clickedUser].status = "Stranger";
