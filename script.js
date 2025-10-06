@@ -1,44 +1,25 @@
-var btn = document.querySelector("button");
-var card = document.querySelector(".user");
 var form = document.querySelector("form");
+var ul = document.querySelector("ul");
 var nameInput = document.querySelector("#username");
-var emailInput = document.querySelector("#email");
+var users = ['naveen', 'rahul'];
 
-var users = [
-  {
-    userName: "sarthak",
-    email: "sarthak@email.com",
-  },
-  {
-    userName: "harsh",
-    email: "harsh@email.com",
-  },
-];
-
-btn.addEventListener("click", function (e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
-  console.log(nameInput.value, emailInput.value);
+  if (!nameInput.checkValidity()) return; 
 
-  var newUser = {
-    userName: nameInput.value,
-    email: emailInput.value,
-  };
-
-  users.push(newUser);
+  users.push(nameInput.value.trim());
   makeusers();
-
-  form.reset;
+  nameInput.value = "";
 });
 
 function makeusers() {
-  let sum = "";
 
-  users.forEach(function (user) {
-    sum += `<h2>name: <span>${user.userName}</span></h2>
-      <h2>email: <span>${user.email}</span></h2>`;
-  });
+  let sum = '';
+  users.forEach(function(user) {
+    sum += `<li>${user}</li>`
+  })
 
-  card.innerHTML = sum;
+  ul.innerHTML = sum;
 }
 
 makeusers();

@@ -10,6 +10,10 @@ body {
   width: 100%;
 }
 
+ul {
+  list-style: lower-alpha;
+}
+
 main{
   background-color: rgb(141, 196, 211);
   width: 100%;
