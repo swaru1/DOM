@@ -7,13 +7,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form>
-      <input id="username" type="text" placeholder="enter name" required />
-      <button type="submit">submit</button>
-    </form>
-    <ul>
+    <div class="main">
+      <div class="allcards">
+      </div>
+
+      <form action="">
+        <input type="text" id="user-inp" placeholder="enter username" required/>
+        <input type="text" id="user-des" placeholder="enter description" required/>
+        <input type="text" id="user-img" placeholder="enter image link" required/>
+        <button id="subBtn" type="submit">create user</button>
+      </form>
+
       
-    </ul>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
